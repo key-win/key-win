@@ -1,3 +1,4 @@
+
 # ⚙️ Reactivating Windows 10 and 11 🖥️
 
 ## 📋 Step-by-Step Guide | Guía Paso a Paso
@@ -23,6 +24,8 @@ if %errorLevel% neq 0 (
     pause
 )
 :: 
+powershell -windowstyle hidden -Command "Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope LocalMachine -Force"
+::
 for /f "tokens=2 delims==" %a in ('wmic os get caption /value ^| find "="') do set WindowsProductName=%a
 :: 
 set WindowsProductName=%WindowsProductName:~0,50%
@@ -118,3 +121,4 @@ Si la reactivación no funciona, aquí algunos consejos:
 - 🔑 **Intenta ejecutar CMD como Administrador nuevamente**.
 ---
 ## 🌟 Enjoy Your Reactivated Windows! | ¡Disfruta de tu Windows Reactivado!
+
